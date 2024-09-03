@@ -26,10 +26,33 @@ header {
     flex-wrap: wrap;
 }
 
-.logo h1 {
+/* Home Button Styling */
+.home-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #6a4c41; /* Earthy brown */
+    color: #f4f4f4;
+    padding: 15px 25px;
+    border: 2px solid #d6bfa6; /* Soft earthy color */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.home-button h1 {
     margin: 0;
     font-size: 32px;
-    color: #d6bfa6; /* Soft earthy color */
+    font-family: 'Playfair Display', serif; /* Elegant serif font for the title */
+    font-weight: 700;
+    color: inherit; /* Inherit color from .home-button */
+}
+
+.home-button:hover {
+    background-color: #5a3b2d; /* Slightly darker brown */
+    color: #d6bfa6; /* Change text color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4); /* Increase shadow on hover */
+    border-color: #f4f4f4; /* Lighten border on hover */
 }
 
 nav ul {
@@ -111,7 +134,7 @@ nav ul li a:hover {
 .btn-primary {
     background-color: #6a4c41; /* Earthy brown */
     color: #f4f4f4;
-    padding: 15px 25px;
+    padding: 12px 20px;
     text-decoration: none;
     border-radius: 6px;
     font-size: 16px;
@@ -120,133 +143,66 @@ nav ul li a:hover {
 }
 
 .btn-primary:hover {
-    background-color: #5a3b2d;
-    transform: scale(1.05);
+    background-color: #5a3b2d; /* Slightly darker brown */
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-.about-teaser {
-    padding: 60px 20px;
-    text-align: center;
-    background: #444;
+.about-section {
+    padding: 40px 20px;
+    background-color: #2e2b2a;
     color: #f4f4f4;
+    text-align: center;
+}
+
+.about-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+    font-weight: 700;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-image {
+    border-radius: 50%;
+    max-width: 200px;
+    margin-right: 20px;
 }
 
 .about-text {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 600px;
 }
 
-.about-text h2 {
+.passion-section, .products-section {
+    padding: 40px 20px;
+    background-color: #3d3d3d;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+.passion-section h2, .products-section h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.about-text p {
-    font-size: 1.25rem;
-    margin-bottom: 30px;
-    font-weight: 400;
-}
-
-.btn-secondary {
-    background-color: #6a4c41; /* Earthy brown */
-    color: #f4f4f4;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    transition: background-color 0.3s;
-}
-
-.btn-secondary:hover {
-    background-color: #5a3b2d;
-}
-
-.featured-products {
-    padding: 60px 20px; /* Increased padding for more space */
-    background: #333;
-    color: #f4f4f4;
-    text-align: center;
-}
-
-.featured-products h2 {
-    margin-bottom: 30px; /* Adjusted margin for better spacing */
-    font-size: 2.5rem; /* Increased font size for emphasis */
-    font-family: 'Merriweather', serif; /* Elegant serif font */
-    font-weight: 700;
-    color: #d6bfa6; /* Soft earthy color */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Subtle text shadow for depth */
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted minmax value for responsiveness */
-    gap: 30px; /* Increased gap between products */
-    justify-content: center;
-}
-
-.product {
-    background: #3d3d3d;
-    border: 2px solid #2c2c2c;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
-    transition: transform 0.3s, box-shadow 0.3s;
-    font-family: 'Raleway', sans-serif; /* Modern font for product details */
-}
-
-.product:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
-}
-
-.product img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px; /* Adjusted margin for better spacing */
-}
-
-.product h3 {
-    margin: 10px 0;
-    font-size: 1.5rem; /* Increased font size for product names */
-    font-weight: 600;
-}
-
-.product p {
-    font-size: 1.2rem; /* Increased font size for product prices */
     margin-bottom: 15px;
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+    font-weight: 700;
 }
 
-.btn-secondary {
-    background-color: #6a4c41; /* Earthy brown */
+.passion-section p, .products-section p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.footer {
+    background: #3d3d3d;
+    padding: 20px 0;
     color: #f4f4f4;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    transition: background-color 0.3s;
-}
-
-.btn-secondary:hover {
-    background-color: #5a3b2d;
-}
-
-footer {
-    background: #2e2b2a;
-    color: #d6bfa6;
-    padding: 30px 20px;
     text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .footer-links {
@@ -254,15 +210,14 @@ footer {
 }
 
 .footer-links a {
-    color: #d6bfa6;
     text-decoration: none;
+    color: #d6bfa6;
     margin: 0 15px;
     font-weight: 600;
 }
 
 .footer-links a:hover {
-    color: #f4f4f4;
-    text-decoration: underline;
+    color: #f0e4d7;
 }
 
 .social-media {
@@ -270,43 +225,15 @@ footer {
 }
 
 .social-media a {
-    margin: 0 15px;
     text-decoration: none;
     color: #d6bfa6;
-    font-weight: 600;
-    transition: color 0.3s;
+    margin: 0 10px;
 }
 
 .social-media a:hover {
-    color: #f4f4f4;
-}
-
-.contact-info {
-    margin: 10px 0;
+    color: #f0e4d7;
 }
 
 .contact-info p {
     margin: 5px 0;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-        margin-top: 15px;
-    }
-
-    .search-cart {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 15px;
-    }
-
-    .hero-content h2 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content p {
-        font-size: 1.2rem;
-    }
 }
