@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Moons Apothecary</title>
+    <title>Contact Us - Moons Apothecary</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,70 +18,80 @@
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="../about/about.html">About</a></li>
+                    <li><a href="../shop.html">Shop</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="search-cart">
                 <input type="text" placeholder="Search...">
-                <a href="#" class="cart-icon" aria-label="View cart">🛒</a>
+                <a href="#" class="cart-icon" aria-label="View cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M..."/>
+                    </svg>
+                </a>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Contact Form Section -->
-        <section class="contact-section">
-            <div class="container">
-                <h1>Contact Us</h1>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h2>Contact</h2>
-                        <p>If you have any questions, feel free to reach out to us. We are here to help you with any inquiries or concerns you may have.</p>
-                        <p><strong>Email:</strong> info@moonsapothecary.com</p>
-                        <p><strong>Phone:</strong> (215) 828-9671</p>
-                        <p><strong>Address:</strong> 123 Wellness St, Healing City, HC 45678</p>
+      <!-- Contact Section -->
+<section class="contact-section">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p>If you have any questions, feel free to reach out to us. We are here to help you with any inquiries or concerns you may have.</p>
+                <div class="info-items">
+                    <div class="info-item">
+                        <h3>Email:</h3>
+                        <p>info@moonsapothecary.com</p>
                     </div>
-                    <div class="contact-form">
-                        <form action="#" method="post">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required>
-                            
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
-                            
-                            <label for="message">Message:</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                            
-                            <button type="submit" class="btn-primary">Send Message</button>
-                        </form>
+                    <div class="info-item">
+                        <h3>Phone:</h3>
+                        <p>(215) 828-9671</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Address:</h3>
+                        <p>123 Wellness St, Healing City, HC 45678</p>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+        
+        <!-- New Section for Contact Form -->
+        <div class="contact-form-section">
+            <h2>Send Us a Message</h2>
+            <form action="send-email.php" method="post" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
 
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-links">
-                <a href="shop.html">Shop</a>
-                <a href="blog.html">Blog</a>
-                <a href="faqs.html">FAQs</a>
-                <a href="policies.html">Policies</a>
+                <a href="../shop.html">Shop</a>
+                <a href="../blog.html">Blog</a>
+                <a href="../faqs.html">FAQs</a>
+                <a href="../policies.html">Policies</a>
             </div>
-            <div class="social-media">
-                <a href="#" aria-label="Facebook">Facebook</a>
-                <a href="#" aria-label="Instagram">Instagram</a>
-                <a href="#" aria-label="Pinterest">Pinterest</a>
-            </div>
-            <div class="contact-info">
-                <p>&copy; 2024 Moons Apothecary. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+
+            </body>
+        </html>
+        

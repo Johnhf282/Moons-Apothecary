@@ -1,0 +1,61 @@
+/* Store Section Styling */
+.store-section {
+    padding: 60px 20px;
+    color: #e0e0e0;
+}
+
+.store-section h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.product {
+    background: #2c2c2c; /* Darker background for product cards */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product h2 {
+    font-size: 1.8rem;
+    margin: 15px 0;
+}
+
+.product p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.product .price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4a5d23; /* Deep earthy green */
+}
+
+.product a {
+    text-decoration: none;
+    color: #e0e0e0;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+}
