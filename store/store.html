@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Store - Moons Apothecary</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css"> <!-- Link to main styles -->
+    <link rel="stylesheet" href="store.css">   <!-- Link to store-specific styles -->
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container">
             <div class="logo">
-                <a href="index.html" class="home-button">
+                <a href="../index.html" class="home-button">
                     <h1>Moons Apothecary</h1>
                 </a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about/about.html">About</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about/about.html">About</a></li>
                     <li><a href="store.html">Store</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="search-cart">
@@ -31,7 +32,7 @@
                         <path d="M..."/>
                     </svg>
                 </a>
-                <a href="cart.html" class="shopping-cart-button" aria-label="View shopping cart">
+                <a href="../cart.html" class="shopping-cart-button" aria-label="View shopping cart">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                         <path d="M..."/>
                     </svg>
@@ -46,24 +47,33 @@
         <section class="store-section">
             <div class="container">
                 <h1>Our Store</h1>
-                <div class="products">
-                    <!-- Example product 1 -->
+                <div class="product-grid">
+                    <!-- Organic Beeswax Candles -->
                     <div class="product">
-                        <img src="path-to-image1.jpg" alt="Product 1">
-                        <h2>Product 1</h2>
-                        <p>Description of Product 1. A brief detail about the product.</p>
+                        <img src="../images/obwthumbnailimage.jpg" alt="Organic Beeswax Candles" class="product-image">
+                        <h2>Organic Beeswax Candles</h2>
                         <p class="price">$20.00</p>
-                        <a href="product1.html" class="btn-primary">View Product</a>
+                        <p class="description">Handcrafted from 100% pure beeswax to create the perfect candel</p>
+                        <a href="organic-beeswax-candles.html" class="btn-primary">View Product</a>
                     </div>
-                    <!-- Example product 2 -->
+
+                    <!-- Organic Lavender -->
                     <div class="product">
-                        <img src="path-to-image2.jpg" alt="Product 2">
-                        <h2>Product 2</h2>
-                        <p>Description of Product 2. A brief detail about the product.</p>
-                        <p class="price">$25.00</p>
-                        <a href="product2.html" class="btn-primary">View Product</a>
+                        <img src="../images/lavenderthumbnail.jpg" alt="Organic Lavender" class="product-image">
+                        <h2>Organic Lavender</h2>
+                        <p class="price">$15.00</p>
+                        <p class="description">Our organic lavender is grown without pesticides, perfect for sachets and aromatherapy.</p>
+                        <a href="organic-lavender.html" class="btn-primary">View Product</a>
                     </div>
-                    <!-- Add more products similarly -->
+
+                    <!-- Palo Santo -->
+                    <div class="product">
+                        <img src="../images/polosantothumbnail.jpg" alt="Palo Santo" class="product-image">
+                        <h2>Palo Santo</h2>
+                        <p class="price">$18.00</p>
+                        <p class="description">Sourced sustainably, Palo Santo is used for its aromatic properties to cleanse spaces and promote relaxation.</p>
+                        <a href="palo-santo.html" class="btn-primary">View Product</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -73,10 +83,22 @@
     <footer>
         <div class="container">
             <div class="footer-links">
+                <a href="../index.html">Home</a>
+                <a href="../about/about.html">About</a>
                 <a href="store.html">Store</a>
-                <a href="blog.html">Blog</a>
-                <a href="faqs.html">FAQs</a>
-                <a href="policies.html">Policies</a>
+                <a href="../blog.html">Blog</a>
+                <a href="../contact/contact.html">Contact</a>
+                <a href="../faqs.html">FAQs</a>
+                <a href="../policies.html">Policies</a>
+            </div>
+            <div class="social-media">
+                <a href="#" aria-label="Facebook">Facebook</a>
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="Pinterest">Pinterest</a>
+            </div>
+            <div class="contact-info">
+                <p>Email: info@moonsapothecary.com</p>
+                <p>Phone: (215) 828-9671</p>
             </div>
         </div>
     </footer>
