@@ -9,13 +9,15 @@ body {
     background-color: #1a1a1a; /* Very dark background for earthy feel */
 }
 
+/* Header Styling */
 header {
     background: #242424; /* Darker shade for the header */
     padding: 20px 0;
-    border-bottom: 3px solid #1b1b1b;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.7);
+    border-bottom: 3px solid #1b1b1b; /* Border at the bottom of the header */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.7); /* Shadow effect for depth */
 }
 
+/* Container Styling */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -30,10 +32,10 @@ header {
 .home-button {
     display: inline-block;
     text-decoration: none;
-    background-color: #4a5d23; /* Deep earthy green */
+    background-color: #5a5a4a; /* Earthy brown-green */
     color: #e0e0e0;
     padding: 15px 25px;
-    border: 2px solid #6b8e23; /* Slightly lighter green */
+    border: 2px solid #7d7d6e; /* Lighter earthy brown-green */
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -48,11 +50,17 @@ header {
 }
 
 .home-button:hover {
-    background-color: #3a4c1a; /* Darker green */
-    color: #a5b0a6; /* Light earthy green */
+    background-color: #4a4a3b; /* Darker earthy brown-green */
+    color: #b0b0a0; /* Light earthy beige */
     transform: scale(1.02); /* Slightly enlarge on hover */
     box-shadow: 0 6px 12px rgba(0,0,0,0.7); /* Increase shadow on hover */
     border-color: #e0e0e0; /* Lighten border on hover */
+}
+
+/* Navigation Menu Styling */
+nav {
+    flex: 1;
+    text-align: center;
 }
 
 nav ul {
@@ -60,33 +68,43 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between menu items */
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #6b8e23; /* Soft earthy green */
+    color: #d0c6a4; /* Warm beige color for text */
+    background-color: transparent; /* No background color */
+    padding: 12px 24px; /* Padding for buttons */
+    border: 2px solid transparent; /* Invisible border initially */
+    border-radius: 8px; /* Rounded corners */
     font-weight: 600;
-    transition: color 0.3s;
+    font-size: 16px;
+    transition: color 0.3s, border-color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #e0e0e0; /* Light color for hover effect */
+    color: #f0f0f0; /* Light color for text on hover */
+    border-color: #5a5a4a; /* Earthy brown-green border on hover */
 }
 
+
+/* Search and Cart Styling */
 .search-cart {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 15px; /* Consistent spacing between search and cart */
 }
 
 .search-cart input[type="text"] {
     padding: 12px;
-    border: 1px solid #4a4a4a;
+    border: 1px solid #5a5a4a;
     border-radius: 4px;
     font-size: 16px;
     width: 220px;
@@ -97,11 +115,12 @@ nav ul li a:hover {
 
 .cart-icon {
     font-size: 24px;
-    color: #6b8e23;
+    color: #7d7d6e;
     text-decoration: none;
     font-weight: 600;
 }
 
+/* Hero Section */
 .hero {
     position: relative;
     width: 100%;
@@ -118,6 +137,7 @@ nav ul li a:hover {
     max-width: 80%;
 }
 
+
 .hero-content h2 {
     font-size: 3.5rem;
     margin-bottom: 20px;
@@ -132,7 +152,7 @@ nav ul li a:hover {
 }
 
 .btn-primary {
-    background-color: #4a5d23; /* Deep earthy green */
+    background-color: #5a5a4a; /* Earthy brown-green */
     color: #e0e0e0;
     padding: 15px 25px;
     text-decoration: none;
@@ -143,7 +163,7 @@ nav ul li a:hover {
 }
 
 .btn-primary:hover {
-    background-color: #3a4c1a; /* Darker green */
+    background-color: #4a4a3b; /* Darker earthy brown-green */
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
@@ -165,7 +185,7 @@ nav ul li a:hover {
 }
 
 .btn-secondary {
-    background-color: #4a5d23; /* Deep earthy green */
+    background-color: #5a5a4a; /* Earthy brown-green */
     color: #e0e0e0;
     padding: 12px 24px;
     text-decoration: none;
@@ -176,7 +196,7 @@ nav ul li a:hover {
 }
 
 .btn-secondary:hover {
-    background-color: #3a4c1a;
+    background-color: #4a4a3b;
 }
 
 .featured-products {
@@ -191,7 +211,7 @@ nav ul li a:hover {
     font-size: 2.5rem; /* Increased font size for emphasis */
     font-family: 'Merriweather', serif; /* Elegant serif font */
     font-weight: 700;
-    color: #6b8e23; /* Soft earthy green */
+    color: #7d7d6e; /* Soft earthy brown-green */
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Subtle text shadow for depth */
 }
 
@@ -239,15 +259,9 @@ nav ul li a:hover {
 
 footer {
     background: #1a1a1a;
-    color: #557020;
+    color: #8c8c6b; /* Warm earthy beige */
     padding: 30px 20px;
     text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .footer-links {
@@ -255,7 +269,7 @@ footer {
 }
 
 .footer-links a {
-    color: #557020;
+    color: #8c8c6b; /* Warm earthy beige */
     text-decoration: none;
     margin: 0 15px;
     font-weight: 600;
@@ -273,7 +287,7 @@ footer {
 .social-media a {
     margin: 0 15px;
     text-decoration: none;
-    color: #557020;
+    color: #8c8c6b; /* Warm earthy beige */
     font-weight: 600;
     transition: color 0.3s;
 }
@@ -290,17 +304,47 @@ footer {
     margin: 5px 0;
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .home-button {
+        padding: 10px 20px;
+        font-size: 24px;
+    }
+
     nav ul {
         flex-direction: column;
+        align-items: center;
         text-align: center;
-        margin-top: 15px;
+        padding: 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
     }
 
     .search-cart {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         margin-top: 15px;
+    }
+
+    .search-cart input[type="text"] {
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+
+    .hero {
+        height: 50vh; /* Reduced height for smaller screens */
     }
 
     .hero-content h2 {
@@ -309,5 +353,37 @@ footer {
 
     .hero-content p {
         font-size: 1.2rem;
+    }
+
+    .about-teaser {
+        padding: 20px 0;
+    }
+
+    .about-teaser h2 {
+        font-size: 2rem;
+    }
+
+    .about-teaser p {
+        font-size: 1rem;
+    }
+
+    .featured-products h2 {
+        font-size: 2rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+    }
+
+    .product img {
+        margin-bottom: 10px; /* Reduced margin */
+    }
+
+    .footer-links {
+        margin-bottom: 15px;
+    }
+
+    .social-media {
+        margin-bottom: 15px;
     }
 }

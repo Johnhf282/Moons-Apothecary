@@ -1,26 +1,23 @@
-/* Combined store.css */
-
 /* Importing Google Fonts for stylish typography */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;600&family=Merriweather:wght@700&display=swap');
 
-/* General Body Styles */
 body {
     font-family: 'Raleway', sans-serif; /* Modern, clean font for body text */
-    color: #e0e0e0; /* Light gray for text to contrast with dark background */
-    background-color: #1a1a1a; /* Very dark background for earthy feel */
     margin: 0;
     padding: 0;
+    color: #e0e0e0; /* Light gray for text to contrast with dark background */
+    background-color: #1a1a1a; /* Very dark background for earthy feel */
 }
 
 /* Header Styling */
 header {
     background: #242424; /* Darker shade for the header */
     padding: 20px 0;
-    border-bottom: 3px solid #1b1b1b;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.7);
+    border-bottom: 3px solid #1b1b1b; /* Border at the bottom of the header */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.7); /* Shadow effect for depth */
 }
 
-/* Container for alignment */
+/* Container Styling */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -35,10 +32,10 @@ header {
 .home-button {
     display: inline-block;
     text-decoration: none;
-    background-color: #4a5d23; /* Deep earthy green */
+    background-color: #5a5a4a; /* Earthy brown-green */
     color: #e0e0e0;
     padding: 15px 25px;
-    border: 2px solid #6b8e23; /* Slightly lighter green */
+    border: 2px solid #7d7d6e; /* Lighter earthy brown-green */
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -53,47 +50,60 @@ header {
 }
 
 .home-button:hover {
-    background-color: #3a4c1a; /* Darker green */
-    color: #a5b0a6; /* Light earthy green */
+    background-color: #4a4a3b; /* Darker earthy brown-green */
+    color: #b0b0a0; /* Light earthy beige */
     transform: scale(1.02); /* Slightly enlarge on hover */
     box-shadow: 0 6px 12px rgba(0,0,0,0.7); /* Increase shadow on hover */
     border-color: #e0e0e0; /* Lighten border on hover */
 }
 
-/* Navigation Styles */
+/* Navigation Menu Styling */
+nav {
+    flex: 1;
+    text-align: center;
+}
+
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between menu items */
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #6b8e23; /* Soft earthy green */
+    color: #d0c6a4; /* Warm beige color for text */
+    background-color: transparent; /* No background color */
+    padding: 12px 24px; /* Padding for buttons */
+    border: 2px solid transparent; /* Invisible border initially */
+    border-radius: 8px; /* Rounded corners */
     font-weight: 600;
-    transition: color 0.3s;
+    font-size: 16px;
+    transition: color 0.3s, border-color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #e0e0e0; /* Light color for hover effect */
+    color: #f0f0f0; /* Light color for text on hover */
+    border-color: #5a5a4a; /* Earthy brown-green border on hover */
 }
 
-/* Search and Cart Styles */
+/* Search and Cart Styling */
 .search-cart {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 15px; /* Consistent spacing between search and cart */
 }
 
 .search-cart input[type="text"] {
     padding: 12px;
-    border: 1px solid #4a4a4a;
+    border: 1px solid #5a5a4a;
     border-radius: 4px;
     font-size: 16px;
     width: 220px;
@@ -102,26 +112,14 @@ nav ul li a:hover {
     color: #e0e0e0;
 }
 
-.cart-icon, .shopping-cart-button svg {
+.cart-icon {
     font-size: 24px;
-    color: #6b8e23;
+    color: #7d7d6e;
     text-decoration: none;
     font-weight: 600;
 }
 
-.shopping-cart-button {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #6b8e23;
-    font-weight: 600;
-}
-
-.shopping-cart-button span {
-    margin-left: 8px;
-}
-
-/* Hero Section Styles */
+/* Hero Section */
 .hero {
     position: relative;
     width: 100%;
@@ -138,6 +136,7 @@ nav ul li a:hover {
     max-width: 80%;
 }
 
+
 .hero-content h2 {
     font-size: 3.5rem;
     margin-bottom: 20px;
@@ -152,7 +151,7 @@ nav ul li a:hover {
 }
 
 .btn-primary {
-    background-color: #4a5d23; /* Deep earthy green */
+    background-color: #5a5a4a; /* Earthy brown-green */
     color: #e0e0e0;
     padding: 15px 25px;
     text-decoration: none;
@@ -163,7 +162,7 @@ nav ul li a:hover {
 }
 
 .btn-primary:hover {
-    background-color: #3a4c1a; /* Darker green */
+    background-color: #4a4a3b; /* Darker earthy brown-green */
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
@@ -181,7 +180,7 @@ nav ul li a:hover {
     font-family: 'Merriweather', serif; /* Elegant serif font */
     color: #e0e0e0; /* Light gray color for text */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-    border-bottom: 4px solid #4a5d23; /* Deep earthy green border for distinction */
+    border-bottom: 4px solid #5a5a4a; /* Earthy brown-green border for distinction */
     padding-bottom: 10px; /* Adds space between text and border */
     display: inline-block; /* Keeps the border from stretching full width */
 }
@@ -233,14 +232,13 @@ nav ul li a:hover {
     display: inline-block;
 }
 
-
 .product p.description {
     font-size: 1rem;
     margin-bottom: 15px;
 }
 
 .btn-primary {
-    background-color: #4a5d23; /* Deep earthy green */
+    background-color: #5a5a4a; /* Earthy brown-green */
     color: #e0e0e0;
     padding: 12px;
     text-decoration: none;
@@ -252,61 +250,46 @@ nav ul li a:hover {
 }
 
 .btn-primary:hover {
-    background-color: #3a4c1a; /* Darker green */
+    background-color: #4a4a3b; /* Darker earthy brown-green */
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 /* Footer Styles */
 footer {
     background: #1a1a1a;
-    color: #557020;
-    padding: 30px 20px;
+    color: #8c8c6b; /* Beige color for footer text */
+    padding: 20px 0;
     text-align: center;
+    border-top: 2px solid #333;
 }
 
-.footer-links a {
-    color: #557020;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 600;
+footer p {
+    margin: 0;
+    font-size: 14px;
 }
 
-.footer-links a:hover {
+footer a {
     color: #e0e0e0;
-    text-decoration: underline;
-}
-
-.social-media a {
-    margin: 0 15px;
     text-decoration: none;
-    color: #557020;
     font-weight: 600;
     transition: color 0.3s;
 }
 
-.social-media a:hover {
+footer a:hover {
+    color: #faca83; /* Orange color for hover effect */
+}
+
+footer .social-icons {
+    margin: 15px 0;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
     color: #e0e0e0;
+    font-size: 24px;
+    transition: color 0.3s;
 }
 
-.contact-info p {
-    margin: 5px 0;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .store-section h1 {
-        font-size: 2rem;
-    }
-
-    .product-grid {
-        gap: 20px;
-    }
-
-    .product h2 {
-        font-size: 1.3rem;
-    }
-
-    .product p.price {
-        font-size: 1rem;
-    }
+footer .social-icons a:hover {
+    color: #faca83; /* Orange color for hover effect */
 }

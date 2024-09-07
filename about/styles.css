@@ -1,27 +1,23 @@
-/* About Page Specific Styles */
-/* Combined store.css */
-
 /* Importing Google Fonts for stylish typography */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;600&family=Merriweather:wght@700&display=swap');
 
-/* General Body Styles */
 body {
     font-family: 'Raleway', sans-serif; /* Modern, clean font for body text */
-    color: #e0e0e0; /* Light gray for text to contrast with dark background */
-    background-color: #1a1a1a; /* Very dark background for earthy feel */
     margin: 0;
     padding: 0;
+    color: #e0e0e0; /* Light gray for text to contrast with dark background */
+    background-color: #1a1a1a; /* Very dark background for earthy feel */
 }
 
 /* Header Styling */
 header {
     background: #242424; /* Darker shade for the header */
     padding: 20px 0;
-    border-bottom: 3px solid #1b1b1b;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.7);
+    border-bottom: 3px solid #1b1b1b; /* Border at the bottom of the header */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.7); /* Shadow effect for depth */
 }
 
-/* Container for alignment */
+/* Container Styling */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -36,10 +32,10 @@ header {
 .home-button {
     display: inline-block;
     text-decoration: none;
-    background-color: #4a5d23; /* Deep earthy green */
+    background-color: #5a5a4a; /* Earthy brown-green */
     color: #e0e0e0;
     padding: 15px 25px;
-    border: 2px solid #6b8e23; /* Slightly lighter green */
+    border: 2px solid #7d7d6e; /* Lighter earthy brown-green */
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -54,35 +50,48 @@ header {
 }
 
 .home-button:hover {
-    background-color: #3a4c1a; /* Darker green */
-    color: #a5b0a6; /* Light earthy green */
+    background-color: #4a4a3b; /* Darker earthy brown-green */
+    color: #b0b0a0; /* Light earthy beige */
     transform: scale(1.02); /* Slightly enlarge on hover */
     box-shadow: 0 6px 12px rgba(0,0,0,0.7); /* Increase shadow on hover */
     border-color: #e0e0e0; /* Lighten border on hover */
 }
 
-/* Navigation Styles */
+/* Navigation Menu Styling */
+nav {
+    flex: 1;
+    text-align: center;
+}
+
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between menu items */
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #6b8e23; /* Soft earthy green */
+    color: #d0c6a4; /* Warm beige color for text */
+    background-color: transparent; /* No background color */
+    padding: 12px 24px; /* Padding for buttons */
+    border: 2px solid transparent; /* Invisible border initially */
+    border-radius: 8px; /* Rounded corners */
     font-weight: 600;
-    transition: color 0.3s;
+    font-size: 16px;
+    transition: color 0.3s, border-color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #e0e0e0; /* Light color for hover effect */
+    color: #f0f0f0; /* Light color for text on hover */
+    border-color: #5a5a4a; /* Earthy brown-green border on hover */
 }
 
 /* Search and Cart Styles */
