@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palo Santo - Moons Apothecary</title>
     <link rel="stylesheet" href="product-page.css">
-
+    <style>
+        /* Alert Message Styles */
+        #alert-message {
+            display: none;
+            opacity: 1;
+            transition: opacity 1s;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: #e0e0e0;
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -17,17 +33,16 @@
                 </a>
             </div>
             <nav>
-                    <ul>
-                        <li><a href="../../../index.html">Home</a></li>
-                        <li><a href="../../../about/about.html">About</a></li>
-                        <li><a href="../../store.html">Store</a></li>
-                        <li><a href="../../../contact/contact.html">Contact</a></li>
-                    </ul>
-                </nav>                
+                <ul>
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="../../../about/about.html">About</a></li>
+                    <li><a href="../../store.html">Store</a></li>
+                    <li><a href="../../../contact/contact.html">Contact</a></li>
+                </ul>
             </nav>
             <div class="search-cart">
                 <input type="text" placeholder="Search...">
-                <a href="#" class="cart-icon" aria-label="View cart">
+                <a href="#" class="cart-icon" aria-label="View cart" id="view-cart">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                         <path d="M..."/>
                     </svg>
@@ -42,26 +57,39 @@
             <div class="container">
                 <div class="product-info">
                     <div class="product-image">
-                        <img src="palosantothumbnail.jpg" alt="Palo Santo">
+                        <img src="../../../images/palosantothumbnail.jpg" alt="Palo Santo">
                     </div>
                     <div class="product-text">
                         <h1>Palo Santo</h1>
-                        <p class="price">$18.00</p>
+                        <p class="price" id="product-price">$18.00</p>
                         <p class="description">Sourced sustainably, Palo Santo is used for its aromatic properties to cleanse spaces and promote relaxation.</p>
-                        <a href="../store.html" class="btn-primary">Back to Store</a>
-                        <a href="#" class="btn-primary add-to-cart">Add to Cart</a>
+                    
+                        <!-- Quantity Selection -->
+                        <label for="quantity">Quantity:</label>
+                        <select id="quantity" name="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    
+                        <!-- Buttons -->
+                        <div class="product-buttons">
+                            <a href="../store.html" class="btn-secondary">Back to Store</a>
+                            <a href="#" class="btn-primary add-to-cart" id="add-to-cart-btn" 
+                               data-name="Palo Santo" 
+                               data-price="18.00">Add to Cart</a>
+                        </div>
                     </div>
-                </div>
-                <div class="product-additional-info">
-                    <h2>Additional Information</h2>
-                    <ul>
-                        <li><strong>Ingredients:</strong> 100% Palo Santo wood</li>
-                        <li><strong>Storage:</strong> Keep in a cool, dry place</li>
-                    </ul>
-                </div>
-            </div>
+                    
         </section>
     </main>
+
+    <!-- Alert Message -->
+    <div id="alert-message" class="alert">
+        Item added to cart!
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -85,5 +113,30 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const alertMessage = document.getElementById('alert-message');
+            const addToCartBtn = document.getElementById('add-to-cart-btn');
+
+            addToCartBtn.addEventListener('click', function(event) {
+                event.preventDefault();
+                // Get quantity from the dropdown
+                const quantity = document.getElementById('quantity').value;
+
+                // Add item to cart logic here
+
+                // Show alert message
+                alertMessage.style.display = 'block';
+                setTimeout(function() {
+                    alertMessage.style.opacity = 0;
+                    setTimeout(function() {
+                        alertMessage.style.display = 'none';
+                        alertMessage.style.opacity = 1;
+                    }, 1000); // Fade out duration
+                }, 3000); // Display duration
+            });
+        });
+    </script>
 </body>
 </html>
