@@ -206,7 +206,7 @@ nav ul li a:hover {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     box-sizing: border-box; /* Ensures padding and border are included in width */
-    width: 100%; /* Ensure it takes full width of the container */
+    width: 80%; /* Ensure it takes full width of the container */
 }
 
 .contact-form-section h2 {
@@ -242,30 +242,31 @@ nav ul li a:hover {
 
 .contact-form input[type="text"],
 .contact-form input[type="email"] {
-    width: 50%; /* Set width to 50% of the parent container */
+    width: 40%; /* Set width to 50% of the parent container */
 }
 
 .contact-form textarea {
-    width: 100%; /* Full width of the parent container */
+    width: 80%; /* Full width of the parent container */ 
     resize: vertical; /* Allows resizing vertically */
 }
 
 .contact-form button {
-    background-color: #4a5d23;
+    background-color: #7d9950;
     color: #e0e0e0;
     padding: 15px 30px;
     border: none;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 600;
+    width: 40%;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     box-sizing: border-box; /* Ensures padding and border are included in width */
 }
 
 .contact-form button:hover {
-    background-color: #3a4c1a;
-    transform: scale(1.05);
+    background-color: #a6c07a;
+    transform: scale(1.02);
     box-shadow: 0 6px 12px rgba(0,0,0,0.5); /* Increase shadow on hover */
 }
 
