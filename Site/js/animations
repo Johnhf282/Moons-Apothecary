@@ -1,0 +1,20 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const elementsToShow = document.querySelectorAll('.hidden');
+
+    const showElementOnScroll = () => {
+        const triggerBottom = window.innerHeight * 0.8;
+
+        elementsToShow.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+
+            if (elementTop < triggerBottom) {
+                element.classList.add('show');
+            } else {
+                element.classList.remove('show');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', showElementOnScroll);
+    showElementOnScroll(); // initial check
+});

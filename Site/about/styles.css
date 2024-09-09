@@ -1,0 +1,330 @@
+/* Importing Google Fonts for stylish typography */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;600&family=Merriweather:wght@700&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif; /* Modern, clean font for body text */
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0; /* Light gray for text to contrast with dark background */
+    background-color: #1a1a1a; /* Very dark background for earthy feel */
+}
+
+/* Header Styling */
+header {
+    background: #242424; /* Darker shade for the header */
+    padding: 20px 0;
+    border-bottom: 3px solid #1b1b1b; /* Border at the bottom of the header */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.7); /* Shadow effect for depth */
+}
+
+/* Container Styling */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Home Button Styling */
+.home-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #5a5a4a; /* Earthy brown-green */
+    color: #e0e0e0;
+    padding: 15px 25px;
+    border: 2px solid #7d7d6e; /* Lighter earthy brown-green */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.home-button h1 {
+    margin: 0;
+    font-size: 32px;
+    font-family: 'Playfair Display', serif; /* Elegant serif font for the title */
+    font-weight: 700;
+    color: inherit; /* Inherit color from .home-button */
+}
+
+.home-button:hover {
+    background-color: #4a4a3b; /* Darker earthy brown-green */
+    color: #b0b0a0; /* Light earthy beige */
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.7); /* Increase shadow on hover */
+    border-color: #e0e0e0; /* Lighten border on hover */
+}
+
+/* Navigation Menu Styling */
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between menu items */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d0c6a4; /* Warm beige color for text */
+    background-color: transparent; /* No background color */
+    padding: 12px 24px; /* Padding for buttons */
+    border: 2px solid transparent; /* Invisible border initially */
+    border-radius: 8px; /* Rounded corners */
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f0f0f0; /* Light color for text on hover */
+    border-color: #5a5a4a; /* Earthy brown-green border on hover */
+}
+
+/* Search and Cart Styles */
+.search-cart {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-cart input[type="text"] {
+    padding: 12px;
+    border: 1px solid #4a4a4a;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 220px;
+    margin-right: 15px;
+    background: #242424;
+    color: #e0e0e0;
+}
+
+.cart-icon, .shopping-cart-button svg {
+    font-size: 24px;
+    color: #6b8e23;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.shopping-cart-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #6b8e23;
+    font-weight: 600;
+}
+
+.shopping-cart-button span {
+    margin-left: 8px;
+}
+
+/* About Section */
+.about-section {
+    padding: 60px 20px;
+    background-color: #1a1a1a; /* Match the dark background from the index page */
+    color: #e0e0e0; /* Light gray text for readability */
+    text-align: center;
+}
+
+.about-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Merriweather', serif; /* Elegant serif font for headings */
+    font-weight: 700;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.about-text {
+    text-align: left;
+    font-family: 'Raleway', sans-serif; /* Consistent with the body font */
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Passion Section */
+.passion-section {
+    padding: 60px 20px;
+    background-color: #333; /* Dark background for contrast */
+    color: #e0e0e0;
+    text-align: center;
+}
+
+.passion-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+}
+
+.passion-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Products Section */
+.products-section {
+    padding: 60px 20px;
+    background-color: #242424; /* Slightly lighter dark background */
+    color: #e0e0e0;
+    text-align: center;
+}
+
+.products-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+}
+
+.products-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.products-section .btn-primary {
+    background-color: #4a5d23; /* Deep earthy green */
+    color: #e0e0e0;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.products-section .btn-primary:hover {
+    background-color: #3a4c1a; /* Darker green */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Responsive Adjustments for About Page */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        max-width: 100%;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+
+footer {
+    background: #1a1a1a;
+    color: #557020;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #557020;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #557020;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #e0e0e0;
+}
+
+.contact-info {
+    margin: 10px 0;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .search-cart {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+}
