@@ -168,6 +168,8 @@ nav ul li a:hover {
     justify-content: center;
     color: #e0e0e0;
     text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards; /* Added fade-in effect */
 }
 
 .hero-content {
@@ -181,6 +183,7 @@ nav ul li a:hover {
     margin-bottom: 20px;
     line-height: 1.2;
     font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Added text-shadow */
 }
 
 .hero-content p {
@@ -198,11 +201,13 @@ nav ul li a:hover {
     font-size: 16px;
     font-weight: 600;
     transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Added box-shadow */
 }
 
 .btn-primary:hover {
     background-color: #4a4a3b;
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.7); /* Enhanced box-shadow on hover */
 }
 
 /* About Us Teaser */
@@ -218,6 +223,9 @@ nav ul li a:hover {
 .about-teaser h2 {
     font-size: 2.5rem;
     margin-bottom: 15px;
+    font-family: 'Merriweather', serif; /* Changed font for consistency */
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Added text-shadow */
 }
 
 .about-teaser p {
@@ -234,10 +242,12 @@ nav ul li a:hover {
     font-size: 14px;
     font-weight: 600;
     transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Added box-shadow */
 }
 
 .btn-secondary:hover {
     background-color: #4a4a3b;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5); /* Enhanced box-shadow on hover */
 }
 
 /* Featured Products Section */
@@ -254,7 +264,7 @@ nav ul li a:hover {
     font-family: 'Merriweather', serif;
     font-weight: 700;
     color: #7d7d6e;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5); /* Enhanced text-shadow */
     opacity: 0;
     animation: fadeIn 1s ease-out 1.5s forwards; /* Fade-in with delay */
 }
@@ -273,7 +283,7 @@ nav ul li a:hover {
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 6px 12px rgba(0,0,0,0.7);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, border 0.3s; /* Added border transition */
     font-family: 'Raleway', sans-serif;
     opacity: 0;
     animation: fadeIn 1s ease-out forwards; /* Fade-in on load */
@@ -282,6 +292,7 @@ nav ul li a:hover {
 .product:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+    border-color: #7d7d6e; /* Added border color change on hover */
 }
 
 .product img {

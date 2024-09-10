@@ -1,20 +1,21 @@
 /* Importing Google Fonts for stylish typography */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;600&family=Merriweather:wght@700&display=swap');
 
+/* Global Styles */
 body {
-    font-family: 'Raleway', sans-serif; /* Modern, clean font for body text */
+    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
-    color: #e0e0e0; /* Light gray for text to contrast with dark background */
-    background-color: #1a1a1a; /* Very dark background for earthy feel */
+    color: #e0e0e0;
+    background-color: #1a1a1a;
 }
 
 /* Header Styling */
 header {
-    background: #242424; /* Darker shade for the header */
+    background: #242424;
     padding: 20px 0;
-    border-bottom: 3px solid #1b1b1b; /* Border at the bottom of the header */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.7); /* Shadow effect for depth */
+    border-bottom: 3px solid #1b1b1b;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.7);
 }
 
 /* Container Styling */
@@ -32,10 +33,10 @@ header {
 .home-button {
     display: inline-block;
     text-decoration: none;
-    background-color: #5a5a4a; /* Earthy brown-green */
+    background-color: #5a5a4a;
     color: #e0e0e0;
     padding: 15px 25px;
-    border: 2px solid #7d7d6e; /* Lighter earthy brown-green */
+    border: 2px solid #7d7d6e;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -44,17 +45,17 @@ header {
 .home-button h1 {
     margin: 0;
     font-size: 32px;
-    font-family: 'Playfair Display', serif; /* Elegant serif font for the title */
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
-    color: inherit; /* Inherit color from .home-button */
+    color: inherit;
 }
 
 .home-button:hover {
-    background-color: #4a4a3b; /* Darker earthy brown-green */
-    color: #b0b0a0; /* Light earthy beige */
-    transform: scale(1.02); /* Slightly enlarge on hover */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.7); /* Increase shadow on hover */
-    border-color: #e0e0e0; /* Lighten border on hover */
+    background-color: #4a4a3b;
+    color: #b0b0a0;
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.7);
+    border-color: #e0e0e0;
 }
 
 /* Navigation Menu Styling */
@@ -70,7 +71,7 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Space between menu items */
+    gap: 20px;
 }
 
 nav ul li {
@@ -79,29 +80,32 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #d0c6a4; /* Warm beige color for text */
-    background-color: transparent; /* No background color */
-    padding: 12px 24px; /* Padding for buttons */
-    border: 2px solid transparent; /* Invisible border initially */
-    border-radius: 8px; /* Rounded corners */
+    color: #d0c6a4;
+    background-color: transparent;
+    padding: 12px 24px;
+    border: 2px solid transparent;
+    border-radius: 8px;
     font-weight: 600;
     font-size: 16px;
-    transition: color 0.3s, border-color 0.3s;
+    transition: color 0.3s, border-color 0.3s, background-color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #f0f0f0; /* Light color for text on hover */
-    border-color: #5a5a4a; /* Earthy brown-green border on hover */
+    color: #fff;
+    background-color: #7d7d6e;
+    border-color: #fff;
 }
+
+/* Search and Cart Styling */
 .search-cart {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .search-cart input[type="text"] {
     padding: 12px;
-    border: 1px solid #4a4a4a;
+    border: 1px solid #5a5a4a;
     border-radius: 4px;
     font-size: 16px;
     width: 220px;
@@ -112,7 +116,7 @@ nav ul li a:hover {
 
 .cart-icon {
     font-size: 24px;
-    color: #6b8e23;
+    color: #7d7d6e;
     text-decoration: none;
     font-weight: 600;
 }

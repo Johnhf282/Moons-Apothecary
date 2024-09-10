@@ -18,6 +18,7 @@ header {
     box-shadow: 0 4px 8px rgba(0,0,0,0.7);
 }
 
+/* Container Styling */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -86,12 +87,13 @@ nav ul li a {
     border-radius: 8px;
     font-weight: 600;
     font-size: 16px;
-    transition: color 0.3s, border-color 0.3s;
+    transition: color 0.3s, border-color 0.3s, background-color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #f0f0f0;
-    border-color: #5a5a4a;
+    color: #fff;
+    background-color: #7d7d6e;
+    border-color: #fff;
 }
 
 /* Search and Cart Styling */
