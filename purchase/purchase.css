@@ -118,53 +118,60 @@ nav ul li a:hover {
     outline: none;
 }
 
-/* Checkout Section Styling */
-.checkout-section {
+/* Main Content Section Styling */
+.purchase-details {
     padding: 40px 0;
+    background-color: #333;
 }
 
-.checkout-form {
-    background-color: #333;
+.purchase-details .container {
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
+    background-color: #444;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.7);
-    max-width: 600px;
-    margin: 0 auto;
 }
 
-.checkout-form fieldset {
-    border: none;
+.purchase-details h1 {
+    font-size: 28px;
+    color: #d0c6a4;
     margin-bottom: 20px;
 }
 
-.checkout-form legend {
-    font-size: 20px;
-    font-weight: 600;
-    color: #d0c6a4;
+#cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    padding: 10px;
+    border-bottom: 1px solid #7d7d6e;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item-details {
     margin-bottom: 10px;
 }
 
-.checkout-form label {
-    display: block;
+.item-name {
+    font-size: 18px;
     font-weight: 600;
-    color: #e0e0e0;
-    margin-bottom: 5px;
 }
 
-.checkout-form input[type="text"], 
-.checkout-form input[type="email"], 
-.checkout-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #7d7d6e;
-    border-radius: 8px;
-    background-color: #444;
-    color: #e0e0e0;
-    margin-bottom: 15px;
+.item-price, .item-quantity, .item-total {
     font-size: 16px;
 }
 
-.checkout-form button {
+#cart-total {
+    font-size: 20px;
+    font-weight: 700;
+    color: #d0c6a4;
+}
+
+#confirm-purchase {
     background-color: #7d7d6e;
     color: #e0e0e0;
     border: none;
@@ -176,38 +183,9 @@ nav ul li a:hover {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.checkout-form button:hover {
+#confirm-purchase:hover {
     background-color: #6a6a5a;
     transform: scale(1.02);
-}
-
-/* Order Summary Styling */
-.order-summary {
-    background-color: #444;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.7);
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-.order-summary h2 {
-    font-size: 24px;
-    color: #d0c6a4;
-    margin-bottom: 20px;
-}
-
-.order-item {
-    margin-bottom: 15px;
-    color: #e0e0e0;
-}
-
-.order-total {
-    border-top: 1px solid #7d7d6e;
-    padding-top: 10px;
-    margin-top: 20px;
-    font-weight: 600;
-    color: #e0e0e0;
 }
 
 /* Footer Styling */

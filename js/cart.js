@@ -1,44 +1,79 @@
 // cart.js
 
 // Initialize the cart from localStorage or start with an empty array
-const cart = JSON.parse(localStorage.getItem('cart')) || [];
+function getCart() {
+    return JSON.parse(localStorage.getItem('cart')) || [];
+}
 
-// Function to add product to cart
-function addToCart(product) {
-    cart.push(product);
+// Save cart to localStorage
+function saveCart(cart) {
     localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// Add or update product in the cart
+function addToCart(product) {
+    let cart = getCart();
+    const existingItemIndex = cart.findIndex(cartItem => cartItem.name === product.name);
+
+    if (existingItemIndex > -1) {
+        // Item exists, update quantity
+        cart[existingItemIndex].quantity += product.quantity;
+    } else {
+        // Item doesn't exist, add it to the cart
+        cart.push(product);
+    }
+
+    saveCart(cart);
     updateCartUI();
 }
 
-// Function to update the cart UI
-function updateCartUI() {
-    const cartCount = cart.length;
-    const cartIcon = document.getElementById('view-cart');
-
-    if (cartIcon) {
-        if (cartCount > 0) {
-            cartIcon.classList.add('cart-filled');
+// Aggregate and calculate total cost of items in the cart
+function aggregateCart(cart) {
+    return cart.reduce((acc, item) => {
+        if (acc[item.name]) {
+            acc[item.name].quantity += item.quantity;
         } else {
-            cartIcon.classList.remove('cart-filled');
+            acc[item.name] = { ...item };
         }
-    }
+        return acc;
+    }, {});
+}
+
+// Calculate total cost of items in cart
+function calculateTotal(cart) {
+    return cart.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2);
+}
+
+// Update the cart UI
+function updateCartUI() {
+    const cartItemsContainer = document.getElementById('cart-items');
+    const cart = getCart();
+    const aggregatedCart = aggregateCart(cart);
+    const totalElement = document.getElementById('cart-total');
+
+    // Clear current cart display
+    cartItemsContainer.innerHTML = '';
+
+    // Display aggregated cart items
+    Object.values(aggregatedCart).forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('cart-item');
+        itemElement.innerHTML = `
+            <div class="cart-item-details">
+                <p class="item-name">${item.name}</p>
+                <p class="item-price">Price: $${item.price.toFixed(2)}</p>
+                <p class="item-quantity">Quantity: ${item.quantity}</p>
+            </div>
+            <p class="item-total">Total: $${(item.price * item.quantity).toFixed(2)}</p>
+        `;
+        cartItemsContainer.appendChild(itemElement);
+    });
+
+    // Update total price
+    totalElement.textContent = `$${calculateTotal(Object.values(aggregatedCart))}`;
 }
 
 // Event listener for DOMContentLoaded to attach event handlers
 document.addEventListener('DOMContentLoaded', () => {
-    const addToCartButtons = document.querySelectorAll('.add-to-cart');
-
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            event.preventDefault();
-            const product = {
-                name: button.dataset.name,
-                price: parseFloat(button.dataset.price),
-                quantity: parseInt(button.dataset.quantity, 10),
-            };
-            addToCart(product);
-        });
-    });
-
-    updateCartUI();
+    updateCartUI(); // Show cart items on load
 });

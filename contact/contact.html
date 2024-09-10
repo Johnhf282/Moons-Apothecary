@@ -33,50 +33,44 @@
             </div>
         </div>
     </header>
-                </a>
-            </div>
-        </div>
-    </header>
 
     <!-- Main Content -->
     <main>
       <!-- Contact Section -->
-<section class="contact-section">
-    <div class="container">
-        <h1>Contact Us</h1>
-        <div class="contact-container">
-            <div class="contact-info">
-                <p>If you have any questions, feel free to reach out to us. We are here to help you with any inquiries or concerns you may have.</p>
-                <div class="info-items">
-                    <div class="info-item">
-                        <h3>Email:</h3>
-                        <p>info@moonsapothecary.com</p>
-                    </div>
-                    <div class="info-item">
-                </div>
-            </div>
-        </div>
-        
-        <!-- New Section for Contact Form -->
-        <div class="contact-form-section">
-            <h2>Send Us a Message</h2>
-            <form action="send-email.php" method="post" class="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+      <section class="contact-section">
+          <div class="container">
+              <h1>Contact Us</h1>
+              <div class="contact-container">
+                  <div class="contact-info">
+                      <p>If you have any questions, feel free to reach out to us. We are here to help you with any inquiries or concerns you may have.</p>
+                      <div class="info-items">
+                          <div class="info-item">
+                              <h3>Email:</h3>
+                              <p>info@moonsapothecary.com</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+              <!-- Contact Form -->
+              <div class="contact-form-section">
+                  <h2>Send Us a Message</h2>
+                  <form id="contactForm" class="contact-form">
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name" required>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="6" required></textarea>
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" required>
 
-                <button type="submit" class="btn-primary">Send Message</button>
-            </form>
-        </div>
-    </div>
-</section>
+                      <label for="message">Message:</label>
+                      <textarea id="message" name="message" rows="6" required></textarea>
 
-
+                      <button type="submit" class="btn-primary">Send Message</button>
+                  </form>
+              </div>
+          </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -95,6 +89,33 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript to handle form submission -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            // Create a FormData object from the form
+            var formData = new FormData(this);
+
+            // Send the form data using fetch
+            fetch('send-email.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                // Show an alert message to the user
+                alert('Message sent!');
+
+                // Clear the form fields
+                document.getElementById('contactForm').reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error sending your message. Please try again.');
+            });
+        });
+    </script>
 </body>
 </html>
-        

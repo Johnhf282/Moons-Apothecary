@@ -71,62 +71,8 @@
         </div>
     </footer>
 
-    <script>
-        // Function to get the cart from localStorage
-        function getCart() {
-            return JSON.parse(localStorage.getItem('cart')) || [];
-        }
-
-        // Function to save the cart to localStorage
-        function saveCart(cart) {
-            localStorage.setItem('cart', JSON.stringify(cart));
-        }
-
-        // Function to calculate the total price of items in the cart
-        function calculateTotal(cart) {
-            return cart.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2);
-        }
-
-        // Function to display cart items
-        function displayCartItems() {
-            const cartItemsContainer = document.getElementById('cart-items');
-            const cart = getCart();
-            const totalElement = document.getElementById('cart-total');
-
-            cartItemsContainer.innerHTML = ''; // Clear previous content
-
-            cart.forEach(item => {
-                const itemElement = document.createElement('div');
-                itemElement.classList.add('cart-item');
-                itemElement.innerHTML = `
-                    <p>${item.name}</p>
-                    <p>Price: $${item.price.toFixed(2)}</p>
-                    <p>Quantity: ${item.quantity}</p>
-                    <p>Total: $${(item.price * item.quantity).toFixed(2)}</p>
-                `;
-                cartItemsContainer.appendChild(itemElement);
-            });
-
-            totalElement.textContent = `$${calculateTotal(cart)}`;
-        }
-
-        // Function to handle purchase confirmation
-        function handleConfirmPurchase() {
-            // Clear the cart
-            localStorage.removeItem('cart');
-            displayCartItems();
-            alert('Thank you for your purchase!');
-        }
-
-        // Event listener for the "Confirm Purchase" button
-        document.addEventListener('DOMContentLoaded', () => {
-            displayCartItems(); // Display cart items when the page loads
-
-            const confirmPurchaseButton = document.getElementById('confirm-purchase');
-            if (confirmPurchaseButton) {
-                confirmPurchaseButton.addEventListener('click', handleConfirmPurchase);
-            }
-        });
-    </script>
+    <!-- Include JavaScript files -->
+    <script src="../js/cart.js"></script>
+    <script src="purchase.js"></script>
 </body>
 </html>
